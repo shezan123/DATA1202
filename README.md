@@ -10,5 +10,5 @@ A function was created to plot the distribution of the top 1000 channel types. U
 ### Question 2: To create a funtion to retrieve top 1000 youtube channels
 A subset of the dataframe was created using “dataframe. iloc” to fetch the first 1000 rows of the dataset.Then,“.to_csv” was used to export the data frame to a CSV file named “Top_1000.csv” with the encoding “cp1252” to allow for special characters (€)
 
-### dataset 
+### Dataset 
 The youtube_dataset.csv is included in the repositry which contains all columns used for this analysis.
