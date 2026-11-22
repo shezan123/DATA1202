@@ -31,7 +31,7 @@ python3 -m http.server 8000   # then open http://localhost:8000
 
 - [ ] Check that the Cloudbeds link opens with the dates filled in. If it doesn't, change `bookingUrl()` in `assets/main.js`.
 - [ ] Add a photo of **The Sussex**. There's none on the current site yet.
-- [ ] Confirm the walking times in the "Distances on foot" card.
+- [ ] Confirm the walking and driving times in the Explore section.
 - [ ] Optional: add guest reviews, quoted with permission.
 
 ## Hosting with GoDaddy (Airo / Websites + Marketing)
