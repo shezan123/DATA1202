@@ -1,37 +1,34 @@
 # The Royal Manor Inn — website revamp
 
-A redesigned one-page site for The Royal Manor Inn, a historic 1832 bed & breakfast at 242 Ricardo Street, Niagara-on-the-Lake.
+A redesigned one-page site for The Royal Manor Inn, the 1832 country manor bed & breakfast at 242 Ricardo Street, Niagara-on-the-Lake.
 
-Plain HTML, CSS and JS. There's no build step and nothing to install.
+It's plain HTML, CSS and JS. There's no build step and nothing to install.
 
 ## Run it
 
-Open `index.html` in a browser, or serve the folder:
-
 ```bash
-python3 -m http.server 8000
-# then visit http://localhost:8000
+python3 -m http.server 8000   # then open http://localhost:8000
 ```
 
-## Structure
+## What's in it
 
-```
-index.html          page content and sections
-assets/styles.css   design tokens, layout, responsive rules
-assets/main.js      mobile nav, scroll reveal, booking form
-```
+- **Colour scheme taken from the manor itself.** Navy from the clapboard, coral from the living room, and gold. Each room card uses that room's own wall colour: Clarence teal, Windsor purple, York sage, Kent blue, Sussex yellow, Cornwall taupe.
+- **Real content and photos** from theroyalmanorinn.com: room descriptions, FAQ, policies and the inn's own photos. The photos are resized, and their camera metadata (including GPS location) is removed.
+- **Booking through the inn's existing Cloudbeds engine** (`hotels.cloudbeds.com/reservation/MyKpEl`). There are two date pickers that stay in sync: a quick one at the top and a full booking card lower down. Guests choose dates, the number of guests and a room, see the number of nights, then click through to Cloudbeds. The dates and guest count are passed in the link, so the booking page opens with the search filled in. Cloudbeds can't preselect a room from a link, so the page reminds the guest which room they picked.
+- A photo gallery that enlarges when clicked, a FAQ that opens and closes, a floating "Book" button on phones, and a "Get directions" link to Google Maps.
 
-## What still needs real content
+## Before going live
 
-The live site was unreachable while this was built. Facts come from public booking listings: the 1832 build date, the James Crooks history, breakfast from 9:00 to 9:30, check-in from 4 to 6 PM, noon checkout, free parking, no pets, no elevator. Please check them and fill in the rest:
+- [ ] Check that the Cloudbeds link opens with the dates filled in. If it doesn't, change `bookingUrl()` in `assets/main.js`.
+- [ ] Add a photo of **The Sussex**. There's none on the current site yet.
+- [ ] Confirm the walking times in the "Distances on foot" card.
+- [ ] Optional: add guest reviews, quoted with permission.
 
-- [ ] **Photos.** Striped boxes mark each photo slot. The hero is an SVG illustration of a house. Replace it with a real exterior shot.
-- [ ] **Rooms.** The room names, beds and descriptions are placeholders. The listings disagree on whether there are 3 or 5 rooms.
-- [ ] **Rates.** None are shown yet.
-- [ ] **Contact.** Add the phone number and email in `index.html`, and set `INN_EMAIL` in `assets/main.js`.
-- [ ] **Booking.** The form opens the guest's email app with the request filled in. Connect it to a booking engine or a form service if you want bookings to land somewhere directly.
-- [ ] **Reviews.** Real guest testimonials can go in a new section. Use only reviews you have permission to quote.
+## Hosting with GoDaddy (Airo / Websites + Marketing)
 
-## Deploy
+GoDaddy's Airo builder is a drag-and-drop editor. It **cannot host custom HTML and CSS sites** like this one. There are two ways to handle that:
 
-Any static host works: GitHub Pages, Netlify or Cloudflare Pages.
+1. **Keep the domain at GoDaddy and host this site elsewhere.** Netlify, Cloudflare Pages and GitHub Pages are all free. Then point the domain's DNS at the new host in GoDaddy's DNS settings. This keeps the design exactly as built.
+2. **Rebuild it inside Airo**, using this site as the design reference: the colours, fonts (Fraunces and Inter), section order and copy. Airo's booking button can link to the same Cloudbeds URL.
+
+Option 1 gives the best result. Option 2 keeps everything in one GoDaddy account.

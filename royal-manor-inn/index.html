@@ -4,228 +4,303 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>The Royal Manor Inn · Niagara-on-the-Lake</title>
-  <meta name="description" content="A historic 1832 bed & breakfast in the Old Town of Niagara-on-the-Lake, steps from the Shaw Festival and Fort George.">
+  <meta name="description" content="A renovated 1832 country manor bed & breakfast in Old Town Niagara-on-the-Lake. Six colourful rooms, gourmet three-course breakfast, garden and koi pond, steps from the Shaw Festival.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,650;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/styles.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23233a2e'/><text x='16' y='22' font-family='Georgia' font-size='16' fill='%23d9b779' text-anchor='middle'>RM</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%231f3a5f'/><text x='16' y='22' font-family='Georgia' font-size='15' fill='%23ffc857' text-anchor='middle'>RM</text></svg>">
 </head>
 <body>
+
+<div class="topbar">
+  <span>242 Ricardo Street · Old Town Niagara-on-the-Lake</span>
+  <a href="tel:+12898688688">+1 289-868-8688</a>
+</div>
 
 <header class="site-header" id="top">
   <a class="brand" href="#top" aria-label="The Royal Manor Inn, home">
     <span class="brand-mark">RM</span>
-    <span class="brand-text">The Royal Manor Inn<small>Niagara-on-the-Lake · Est. 1832</small></span>
+    <span class="brand-text">The Royal Manor Inn<small>A country manor since 1832</small></span>
   </a>
-  <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+  <button class="nav-toggle" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span><b class="sr-only">Menu</b></button>
   <nav id="nav" class="nav">
-    <a href="#story">Our Story</a>
     <a href="#rooms">Rooms</a>
+    <a href="#manor">The Manor</a>
     <a href="#breakfast">Breakfast</a>
     <a href="#explore">Explore</a>
-    <a href="#stay">Plan Your Stay</a>
-    <a class="btn btn-small" href="#book">Book Now</a>
+    <a href="#faq">FAQ</a>
+    <a class="btn btn-coral btn-small" href="#book">Book Now</a>
   </nav>
 </header>
 
 <main>
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-art" aria-hidden="true">
-      <!-- Placeholder illustration: replace with a real photo of the house (assets/hero.jpg) -->
-      <svg viewBox="0 0 800 520" preserveAspectRatio="xMidYMid slice">
-        <defs>
-          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stop-color="#f3e3c3"/><stop offset="1" stop-color="#e7c99a"/>
-          </linearGradient>
-        </defs>
-        <rect width="800" height="520" fill="url(#sky)"/>
-        <circle cx="640" cy="120" r="60" fill="#f7efe0" opacity=".8"/>
-        <g fill="#2f4a3a" opacity=".9">
-          <ellipse cx="90" cy="400" rx="120" ry="150"/><ellipse cx="730" cy="410" rx="130" ry="160"/>
-        </g>
-        <g>
-          <polygon points="220,230 400,120 580,230" fill="#5a3b2e"/>
-          <rect x="240" y="230" width="320" height="220" fill="#f6efe2"/>
-          <rect x="370" y="140" width="22" height="50" fill="#5a3b2e"/>
-          <g fill="#233a2e">
-            <rect x="270" y="260" width="44" height="60" rx="3"/><rect x="486" y="260" width="44" height="60" rx="3"/>
-            <rect x="270" y="350" width="44" height="60" rx="3"/><rect x="486" y="350" width="44" height="60" rx="3"/>
-            <rect x="378" y="260" width="44" height="60" rx="3"/>
-            <path d="M372 450 v-70 a28 28 0 0 1 56 0 v70z"/>
-          </g>
-          <rect x="230" y="446" width="340" height="10" fill="#c9a86a"/>
-        </g>
-        <rect y="456" width="800" height="64" fill="#3d5a47"/>
-      </svg>
-    </div>
+    <img class="hero-img" src="assets/img/exterior.jpg" alt="The Royal Manor Inn, a blue clapboard manor with a white gazebo and summer gardens" fetchpriority="high">
+    <div class="hero-shade"></div>
     <div class="hero-content">
-      <p class="eyebrow">A historic bed &amp; breakfast in Old Town</p>
-      <h1>Stay where the story of Niagara-on-the-Lake began.</h1>
-      <p class="lead">An 1832 manor on a quiet tree-lined street, a short stroll from Queen Street, the Shaw Festival and Fort George. Full breakfast every morning, ensuite rooms, and an innkeeper who knows the town by heart.</p>
-      <div class="hero-actions">
-        <a class="btn" href="#book">Check availability</a>
-        <a class="btn btn-ghost" href="#rooms">See the rooms</a>
-      </div>
+      <p class="pill">Renovated 2024 · Licence #042-2024</p>
+      <h1>A 200-year-old manor,<br><em>made for slow mornings.</em></h1>
+      <p class="lead">Six colourful rooms, a gourmet three-course breakfast, a koi-pond garden and a 4 PM wine hour, a five-minute stroll from Old Town and the Shaw Festival.</p>
     </div>
+
+    <form class="quickbook" data-booking aria-label="Check availability">
+      <label><span>Check-in</span><input type="date" name="checkin" required></label>
+      <label><span>Check-out</span><input type="date" name="checkout" required></label>
+      <label><span>Guests</span>
+        <select name="adults"><option value="1">1 guest</option><option value="2" selected>2 guests</option></select>
+      </label>
+      <button class="btn btn-coral" type="submit">Check availability</button>
+      <p class="form-msg" role="status" aria-live="polite"></p>
+    </form>
   </section>
 
-  <!-- QUICK FACTS -->
-  <section class="facts" aria-label="At a glance">
-    <div><strong>1832</strong><span>Built &amp; restored</span></div>
-    <div><strong>Ensuite</strong><span>Private bath in every room</span></div>
-    <div><strong>Full breakfast</strong><span>Served daily, included</span></div>
-    <div><strong>Free parking</strong><span>On site</span></div>
+  <!-- COLOUR STRIP -->
+  <section class="strip" aria-label="Highlights">
+    <div class="s1"><strong>6</strong><span>uniquely coloured rooms</span></div>
+    <div class="s2"><strong>3-course</strong><span>gourmet breakfast, included</span></div>
+    <div class="s3"><strong>4 PM</strong><span>social hour with wine</span></div>
+    <div class="s4"><strong>Free</strong><span>reserved parking &amp; bike storage</span></div>
   </section>
 
   <!-- STORY -->
-  <section class="section split" id="story">
-    <div>
-      <p class="eyebrow">Our Story</p>
-      <h2>Nearly two centuries of welcome</h2>
-      <p>The Royal Manor was built in 1832 and was once owned by James Crooks, a militia captain in the War of 1812. Today the house keeps its original character — tall windows, deep moulding, a front porch made for slow mornings — with the comforts a modern traveller expects.</p>
-      <p>Guests come back for the quiet, the breakfasts, and for the warm hospitality of our innkeeper, who is always happy to point you to the best winery, the right theatre seat, or a sunset spot on the lake.</p>
+  <section class="section story" id="story">
+    <div class="story-text">
+      <p class="eyebrow">Our story</p>
+      <h2>From 1812 tavern to boutique bed&nbsp;&amp;&nbsp;breakfast</h2>
+      <p>Built in 1832, the Manor was once owned by <strong>James Crooks</strong>, a celebrated militia captain from the War of 1812, who turned it into a welcoming tavern and inn after the war.</p>
+      <p>Completely renovated in 2024, it now pairs old-world charm with modern comfort: plush furnishings, modern art, warm colours, and a serene garden with a koi pond beneath giant willows. We're across from the Niagara Pumphouse Art Gallery, nestled in a horseshoe of Niagara Parks land between Willow Park and Fort George.</p>
+      <a class="link" href="#manor">Tour the manor →</a>
     </div>
-    <figure class="frame">
-      <div class="placeholder" data-label="Photo: front of the house">
-        <span>Replace with photo of the manor exterior</span>
-      </div>
-    </figure>
+    <div class="story-photos">
+      <img src="assets/img/living-room.jpg" alt="Living room with a coral feature wall, fireplace and glass coffee table" loading="lazy">
+      <img src="assets/img/porch.jpg" alt="Covered porch with a stone fireplace and navy outdoor sofas" loading="lazy">
+    </div>
   </section>
 
   <!-- ROOMS -->
-  <section class="section" id="rooms">
-    <div class="section-head">
-      <p class="eyebrow">Rooms</p>
-      <h2>Rest in quiet, period comfort</h2>
-      <p>Every room is air-conditioned, with a private ensuite bathroom, Wi-Fi and fresh linens. Room names, beds and rates below are placeholders — update them in <code>index.html</code>.</p>
+  <section class="section rooms-section" id="rooms">
+    <div class="section-head center">
+      <p class="eyebrow">Accommodations</p>
+      <h2>Six rooms, six personalities</h2>
+      <p>Each room has a queen or king bed, a private bathroom, a large smart TV with Netflix, premium L'Occitane bath products, luxurious linens and free high-speed Wi-Fi.</p>
     </div>
+
     <div class="rooms">
-      <article class="room">
-        <div class="placeholder" data-label="Room photo"><span>Room photo</span></div>
+      <article class="room" style="--room:#2f8f8a; --room-soft:#dff3f1">
+        <div class="room-img"><img src="assets/img/room-clarence.jpg" alt="The Clarence suite with a king bed and vaulted ceiling" loading="lazy"><span class="tag">Suite</span></div>
         <div class="room-body">
-          <h3>The Crooks Suite</h3>
-          <p class="room-meta">Queen bed · Ensuite · Garden view</p>
-          <p>Our largest room, named for the manor's most famous owner, with a sitting area and morning light.</p>
-          <a class="link" href="#book">Request this room →</a>
+          <h3>The Clarence</h3>
+          <ul class="chips"><li>King bed</li><li>Garden &amp; Fort George views</li></ul>
+          <p>A historic haven of opulent comfort with a 180° view of the garden and Fort George. Perfect for celebrating special moments.</p>
+          <button class="btn btn-room" data-room="The Clarence">Book the Clarence</button>
         </div>
       </article>
-      <article class="room">
-        <div class="placeholder" data-label="Room photo"><span>Room photo</span></div>
+
+      <article class="room" style="--room:#6b3fa0; --room-soft:#efe6fa">
+        <div class="room-img"><img src="assets/img/room-windsor.jpg" alt="The Windsor with a deep purple accent wall" loading="lazy"><span class="tag">Ground floor</span></div>
         <div class="room-body">
-          <h3>The Shaw Room</h3>
-          <p class="room-meta">Queen bed · Ensuite · Street view</p>
-          <p>A calm retreat for theatre weekends — you can walk to the Festival in minutes.</p>
-          <a class="link" href="#book">Request this room →</a>
+          <h3>The Windsor</h3>
+          <ul class="chips"><li>Queen bed</li><li>Open-concept shower</li></ul>
+          <p>Bathed in deep purple, a regal retreat that blends tradition and modernity, with a unique open-concept shower.</p>
+          <button class="btn btn-room" data-room="The Windsor">Book the Windsor</button>
         </div>
       </article>
-      <article class="room">
-        <div class="placeholder" data-label="Room photo"><span>Room photo</span></div>
+
+      <article class="room" style="--room:#6f8f4e; --room-soft:#ebf2e2">
+        <div class="room-img"><img src="assets/img/room-york.jpg" alt="The York painted sage green with a queen bed" loading="lazy"><span class="tag">220 sq ft</span></div>
         <div class="room-body">
-          <h3>The Ricardo Room</h3>
-          <p class="room-meta">Double bed · Ensuite · Cozy</p>
-          <p>Snug and bright, ideal for solo travellers or couples who plan to be out exploring.</p>
-          <a class="link" href="#book">Request this room →</a>
+          <h3>The York</h3>
+          <ul class="chips"><li>Queen bed</li><li>Niagara River view</li></ul>
+          <p>Our most spacious queen room, painted sage green and facing the Niagara River, Fort George and the Pumphouse Art Gallery.</p>
+          <button class="btn btn-room" data-room="The York">Book the York</button>
         </div>
       </article>
+
+      <article class="room" style="--room:#2c5aa0; --room-soft:#e3ecfa">
+        <div class="room-img"><img src="assets/img/room-kent.jpg" alt="The Kent with a navy blue accent wall" loading="lazy"><span class="tag">180 sq ft</span></div>
+        <div class="room-body">
+          <h3>The Kent</h3>
+          <ul class="chips"><li>Queen bed</li><li>Reading nook</li><li>Park view</li></ul>
+          <p>A cozy blue sanctuary with a reading nook and a large bathroom under cathedral ceilings, made for quiet moments with a good book.</p>
+          <button class="btn btn-room" data-room="The Kent">Book the Kent</button>
+        </div>
+      </article>
+
+      <article class="room" style="--room:#d9a21b; --room-soft:#fdf3d6">
+        <div class="room-img room-img-empty"><span>Photo coming soon</span><span class="tag">200 sq ft</span></div>
+        <div class="room-body">
+          <h3>The Sussex</h3>
+          <ul class="chips"><li>Queen bed</li><li>Morning sun</li><li>River view</li></ul>
+          <p>Painted in soft yellows and filled with morning light, overlooking two ancient willows and the Niagara River.</p>
+          <button class="btn btn-room" data-room="The Sussex">Book the Sussex</button>
+        </div>
+      </article>
+
+      <article class="room" style="--room:#9a7b5f; --room-soft:#f3ebe2">
+        <div class="room-img"><img src="assets/img/room-cornwall.jpg" alt="The Cornwall in calming taupe tones" loading="lazy"><span class="tag">190 sq ft</span></div>
+        <div class="room-body">
+          <h3>The Cornwall</h3>
+          <ul class="chips"><li>Queen bed</li><li>Forest view</li></ul>
+          <p>Wrapped in calming taupe, with a bright, spacious bathroom under cathedral ceilings and a view of the forest bordering Fort George.</p>
+          <button class="btn btn-room" data-room="The Cornwall">Book the Cornwall</button>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- MANOR GALLERY -->
+  <section class="section manor" id="manor">
+    <div class="section-head">
+      <p class="eyebrow">The Manor</p>
+      <h2>Spaces to linger</h2>
+      <p>Curl up by the fireplace with a glass of wine, sit by the koi pond between the willows, or put your feet up in a rocking chair on the porch.</p>
+    </div>
+    <div class="gallery">
+      <button class="g g-wide" data-full="assets/img/exterior.jpg"><img src="assets/img/exterior.jpg" alt="Manor exterior with gazebo and gardens" loading="lazy"><span>The manor &amp; gazebo</span></button>
+      <button class="g" data-full="assets/img/living-room.jpg"><img src="assets/img/living-room.jpg" alt="Living room with fireplace" loading="lazy"><span>Living room</span></button>
+      <button class="g g-tall" data-full="assets/img/dining.jpg"><img src="assets/img/dining.jpg" alt="Dining room with garden window" loading="lazy"><span>Dining room</span></button>
+      <button class="g" data-full="assets/img/porch.jpg"><img src="assets/img/porch.jpg" alt="Covered porch with stone fireplace" loading="lazy"><span>Fireside porch</span></button>
     </div>
   </section>
 
   <!-- BREAKFAST -->
-  <section class="section band" id="breakfast">
-    <div class="split">
-      <figure class="frame">
-        <div class="placeholder dark" data-label="Breakfast photo"><span>Replace with breakfast photo</span></div>
-      </figure>
+  <section class="breakfast" id="breakfast">
+    <div class="breakfast-inner">
+      <img src="assets/img/dining.jpg" alt="Breakfast table in the dining room overlooking the garden" loading="lazy">
       <div>
-        <p class="eyebrow">Breakfast</p>
-        <h2>A full breakfast, made fresh each morning</h2>
-        <p>Breakfast is included with every stay and served in the dining room from 9:00 to 9:30 AM. Expect seasonal fruit, fresh baking and a hot main course — and plenty of coffee.</p>
-        <p>Dietary needs? Let us know when you book and we'll plan around them.</p>
+        <p class="eyebrow light">Breakfast</p>
+        <h2>A gourmet three-course breakfast, every morning</h2>
+        <p>Served in our modern dining room overlooking the garden and koi pond, with fresh, locally sourced ingredients and a fine selection of coffee and teas.</p>
+        <ul class="ticks">
+          <li>Vegetarian &amp; vegan options</li>
+          <li>Food allergies happily accommodated</li>
+          <li>Included with every stay</li>
+        </ul>
       </div>
     </div>
   </section>
 
   <!-- EXPLORE -->
   <section class="section" id="explore">
-    <div class="section-head">
+    <div class="section-head center">
       <p class="eyebrow">Explore</p>
-      <h2>Everything Old Town offers, on foot</h2>
+      <h2>Old Town is a five-minute stroll</h2>
+      <p>We're half a kilometre from the heart of Old Town. Just ask, and our innkeeper will book the wine pairing, the theatre seats or the dinner reservation for you.</p>
     </div>
-    <ul class="explore">
-      <li><h3>Shaw Festival</h3><p>World-class theatre a short walk from the front door.</p></li>
-      <li><h3>Fort George</h3><p>The National Historic Site where the War of 1812 played out.</p></li>
-      <li><h3>Queen Street</h3><p>Shops, cafés, the clock tower and some of Ontario's best dining.</p></li>
-      <li><h3>Wine Country</h3><p>Dozens of Niagara wineries within a short drive or bike ride.</p></li>
-      <li><h3>The Lakefront</h3><p>Sunset walks along Lake Ontario at Queen's Royal Park.</p></li>
-      <li><h3>Niagara Falls</h3><p>About a 25-minute drive along the scenic Niagara Parkway.</p></li>
-    </ul>
+    <div class="explore">
+      <div class="ex" style="--c:#e85d3f"><span class="ex-icon">🎭</span><h3>Shaw Festival</h3><p>All of the Shaw Festival theatres are an easy walk away. Ask us about dinner-and-a-show evenings.</p></div>
+      <div class="ex" style="--c:#6b3fa0"><span class="ex-icon">🍷</span><h3>Wine country</h3><p>Nearly 40 wineries, from Between the Lines to Château des Charmes, Pillitteri and our local favourite, AMO.</p></div>
+      <div class="ex" style="--c:#2f8f8a"><span class="ex-icon">🏰</span><h3>Fort George</h3><p>The War of 1812 fort sits right next door, bordered by forest and parkland.</p></div>
+      <div class="ex" style="--c:#2c5aa0"><span class="ex-icon">🛶</span><h3>Lake &amp; river</h3><p>Lake Ontario's shore is steps away. Try paddleboarding, kayaking, or a bike tour along the Niagara River.</p></div>
+      <div class="ex" style="--c:#d9a21b"><span class="ex-icon">🍽️</span><h3>Dining</h3><p>Treadwell, The Epicurean, Corks, HOB NOB, The Olde Angel Inn, Noble, Tiara and more, all walkable.</p></div>
+      <div class="ex" style="--c:#6f8f4e"><span class="ex-icon">🌊</span><h3>Niagara Falls</h3><p>A short drive to the Falls, the Butterfly Conservatory, casinos and world-class golf.</p></div>
+    </div>
   </section>
 
-  <!-- PLAN YOUR STAY -->
-  <section class="section band" id="stay">
+  <!-- FAQ -->
+  <section class="section faq-section" id="faq">
     <div class="section-head">
-      <p class="eyebrow">Plan Your Stay</p>
-      <h2>Good to know</h2>
+      <p class="eyebrow">Good to know</p>
+      <h2>Questions, answered</h2>
     </div>
-    <dl class="policies">
-      <div><dt>Check-in</dt><dd>4:00 – 6:00 PM. Arriving later? Just let us know.</dd></div>
-      <div><dt>Check-out</dt><dd>By 12:00 noon.</dd></div>
-      <div><dt>Breakfast</dt><dd>Included, served 9:00 – 9:30 AM.</dd></div>
-      <div><dt>Parking</dt><dd>Free on-site parking.</dd></div>
-      <div><dt>Guests</dt><dd>Adults-focused, quiet house. No parties or events.</dd></div>
-      <div><dt>Pets</dt><dd>Sorry, pets aren't permitted.</dd></div>
-      <div><dt>Accessibility</dt><dd>Historic home with stairs and no elevator.</dd></div>
-      <div><dt>Smoking</dt><dd>Non-smoking property.</dd></div>
-    </dl>
+    <div class="faq">
+      <details open><summary>What are the check-in and check-out times?</summary><p>Check-in is from 3:00 to 6:00 PM, and check-out is by 11:00 AM. Arriving later? Just call us.</p></details>
+      <details><summary>Is breakfast included?</summary><p>Yes! A gourmet three-course breakfast with a fine selection of coffee and teas. We cater to food allergies and offer vegetarian and vegan options.</p></details>
+      <details><summary>Is parking included? Can I bring my bike?</summary><p>Yes, you get reserved parking for one vehicle for your whole stay, which is a real perk in Old Town. Bicycles can go in the garage.</p></details>
+      <details><summary>Are there common areas?</summary><p>There's a garden with plenty of seating, an indoor living room with a fireplace, and a 4:00 PM social hour with complimentary wine.</p></details>
+      <details><summary>Are children and pets allowed?</summary><p>Children over 12 are welcome. There's a two-person limit per room. We have a strict no-pet policy, out of care for future guests with allergies.</p></details>
+      <details><summary>What is your cancellation policy?</summary><p>We take a 50% deposit when you book. If you cancel more than 30 days before arrival, we refund it minus a $50 CAD administration fee. Within 30 days of arrival, the deposit is non-refundable. Cancellations within 7 days of arrival are charged the full room rate.</p></details>
+      <details><summary>Is there Wi-Fi?</summary><p>Yes, free high-speed Wi-Fi, plus a smart TV with Netflix in every room.</p></details>
+    </div>
   </section>
 
   <!-- BOOK -->
-  <section class="section" id="book">
-    <div class="split">
-      <div>
-        <p class="eyebrow">Book Direct</p>
-        <h2>Request your dates</h2>
-        <p>Booking direct gets you the best rate and a direct line to the innkeeper. Send us your dates and we'll confirm availability.</p>
-        <address>
-          <strong>The Royal Manor Inn</strong><br>
-          242 Ricardo Street<br>
-          Niagara-on-the-Lake, ON L0S 1J0<br>
-          <a href="tel:+10000000000">Phone: add number</a><br>
-          <a href="mailto:hello@example.com">Email: add address</a>
-        </address>
+  <section class="book" id="book">
+    <div class="book-inner">
+      <div class="book-copy">
+        <p class="eyebrow light">Book direct</p>
+        <h2>Reserve your room</h2>
+        <p>Pick your dates and we'll take you straight to our secure booking page to see live availability and rates. Booking direct means no third-party fees and a direct line to your innkeeper.</p>
+        <ul class="ticks">
+          <li>50% deposit secures your booking</li>
+          <li>Up to 2 guests per room · ages 12+</li>
+          <li>Questions? Call <a href="tel:+12898688688">+1 289-868-8688</a></li>
+        </ul>
       </div>
-      <form class="booking" id="booking-form" novalidate>
+
+      <form class="booking-card" data-booking aria-label="Book a room">
         <div class="row">
-          <label>Check-in<input type="date" name="checkin" required></label>
-          <label>Check-out<input type="date" name="checkout" required></label>
+          <label><span>Check-in</span><input type="date" name="checkin" required></label>
+          <label><span>Check-out</span><input type="date" name="checkout" required></label>
         </div>
         <div class="row">
-          <label>Guests
-            <select name="guests"><option>1</option><option selected>2</option><option>3</option><option>4</option></select>
+          <label><span>Guests</span>
+            <select name="adults"><option value="1">1 guest</option><option value="2" selected>2 guests</option></select>
           </label>
-          <label>Room
-            <select name="room"><option>No preference</option><option>The Crooks Suite</option><option>The Shaw Room</option><option>The Ricardo Room</option></select>
+          <label><span>Room</span>
+            <select name="room">
+              <option value="">Any room</option>
+              <option>The Clarence</option><option>The Windsor</option><option>The York</option>
+              <option>The Kent</option><option>The Sussex</option><option>The Cornwall</option>
+            </select>
           </label>
         </div>
-        <label>Name<input type="text" name="name" autocomplete="name" required></label>
-        <label>Email<input type="email" name="email" autocomplete="email" required></label>
-        <label>Notes<textarea name="notes" rows="3" placeholder="Dietary needs, arrival time, special occasions…"></textarea></label>
-        <button class="btn" type="submit">Send request</button>
-        <p class="form-status" role="status" aria-live="polite"></p>
+        <div class="stay-summary" aria-live="polite">
+          <div><span>Nights</span><strong data-nights>-</strong></div>
+          <div><span>Arrive</span><strong data-arrive>-</strong></div>
+          <div><span>Depart</span><strong data-depart>-</strong></div>
+        </div>
+        <button class="btn btn-coral btn-block" type="submit">See availability &amp; rates →</button>
+        <p class="form-msg" role="status" aria-live="polite"></p>
+        <p class="room-hint" hidden></p>
+        <p class="fine">Opens our secure booking page, powered by Cloudbeds, in a new tab.</p>
       </form>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact" id="contact">
+    <div>
+      <p class="eyebrow">Find us</p>
+      <h2>242 Ricardo Street</h2>
+      <p>Niagara-on-the-Lake, Ontario L0S 1J0<br>Across from the Niagara Pumphouse Art Gallery</p>
+      <p><a class="link" href="tel:+12898688688">+1 289-868-8688</a><br>Office hours 9:00 AM – 5:00 PM</p>
+      <div class="contact-actions">
+        <a class="btn btn-navy" href="https://www.google.com/maps/search/?api=1&amp;query=242+Ricardo+Street+Niagara-on-the-Lake+ON" target="_blank" rel="noopener">Get directions</a>
+        <a class="btn btn-ghost" href="https://www.instagram.com/theroyalmanorinn/" target="_blank" rel="noopener">Instagram</a>
+        <a class="btn btn-ghost" href="https://www.facebook.com/TheRoyalManorInn/" target="_blank" rel="noopener">Facebook</a>
+      </div>
+    </div>
+    <div class="contact-card">
+      <h3>Distances on foot</h3>
+      <ul>
+        <li><span>Niagara River &amp; Pumphouse Gallery</span><b>across the street</b></li>
+        <li><span>Fort George</span><b>3 min</b></li>
+        <li><span>Queen Street, Old Town</span><b>5 min</b></li>
+        <li><span>Shaw Festival theatres</span><b>5–10 min</b></li>
+        <li><span>Lake Ontario shore</span><b>5 min</b></li>
+      </ul>
+      <p class="fine">Walking times are approximate.</p>
     </div>
   </section>
 </main>
 
 <footer class="site-footer">
-  <div>
+  <div class="foot-brand">
     <span class="brand-mark">RM</span>
-    <p>The Royal Manor Inn · 242 Ricardo Street, Niagara-on-the-Lake, Ontario</p>
+    <p>The Royal Manor Inn<br><small>242 Ricardo Street, Niagara-on-the-Lake, ON · Licence #042-2024</small></p>
   </div>
   <p class="small">© <span id="year"></span> The Royal Manor Inn</p>
 </footer>
+
+<a class="mobile-book btn btn-coral" href="#book">Book your stay</a>
+
+<dialog class="lightbox" aria-label="Photo viewer">
+  <img alt="">
+  <button class="lb-close" aria-label="Close">×</button>
+</dialog>
 
 <script src="assets/main.js"></script>
 </body>
