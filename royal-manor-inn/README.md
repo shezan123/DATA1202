@@ -12,10 +12,20 @@ python3 -m http.server 8000   # then open http://localhost:8000
 
 ## What's in it
 
-- **Colour scheme taken from the manor itself.** Navy from the clapboard, coral from the living room, and gold. Each room card uses that room's own wall colour: Clarence teal, Windsor purple, York sage, Kent blue, Sussex yellow, Cornwall taupe.
-- **Real content and photos** from theroyalmanorinn.com: room descriptions, FAQ, policies and the inn's own photos. The photos are resized, and their camera metadata (including GPS location) is removed.
-- **Booking through the inn's existing Cloudbeds engine** (`hotels.cloudbeds.com/reservation/MyKpEl`). There are two date pickers that stay in sync: a quick one at the top and a full booking card lower down. Guests choose dates, the number of guests and a room, see the number of nights, then click through to Cloudbeds. The dates and guest count are passed in the link, so the booking page opens with the search filled in. Cloudbeds can't preselect a room from a link, so the page reminds the guest which room they picked.
-- A photo gallery that enlarges when clicked, a FAQ that opens and closes, a floating "Book" button on phones, and a "Get directions" link to Google Maps.
+**Look.** The colours and fonts are inspired by tabergfalls.com. The palette is deep forest greens (`#151a14`, `#272f25`, `#2f392c`), warm cream and linen (`#faf6f0`, `#ebe3d3`), and a gold-copper accent (`#d3a976`, `#bd7441`). Headings are in Playfair Display, with italics for emphasis. Body text is Montserrat, and quotes are Cormorant Garamond. Each room keeps a small dot in its own wall colour.
+
+**Motion.** The animation is inspired by hotelparticulier.com and written in plain JavaScript, with no libraries:
+- An opening curtain with a gold loading line, then the hero photo settles from a slight zoom while the headline rises into place line by line.
+- A header with Menu, logo and Reserve. It turns solid cream once you scroll past the hero and hides while you scroll down.
+- A full-screen menu that wipes down. Its links appear one after another, and the photo on the left changes as you hover each one.
+- A circular "Est. 1832" emblem that turns as you scroll.
+- In the rooms section, hovering or tapping a room name crossfades the background to that room's photo and swaps in its details.
+- Photos zoom in slowly as they scroll through the screen.
+- A photo strip you can drag, which keeps gliding with momentum after you let go. It drifts slowly on its own, and a round gold "Drag" cursor appears over it.
+- Text fades up into place in short sequences as you scroll.
+- All motion turns off when the visitor's device asks for reduced motion.
+
+**Content and booking.** The text and photos come from theroyalmanorinn.com. The photos are resized, and their camera metadata (including GPS location) is removed. Booking sends guests to the inn's existing Cloudbeds engine (`hotels.cloudbeds.com/reservation/MyKpEl`) with the dates and guest count passed in the link. The two date pickers (one in the hero, one in the booking section) stay in sync. "Reserve this room" picks that room in the booking form, and the page reminds the guest to choose it on the Cloudbeds page.
 
 ## Before going live
 
