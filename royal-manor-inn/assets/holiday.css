@@ -1,0 +1,82 @@
+/* Winter at the Manor: holiday theme layered over styles.css */
+body.holiday {
+  --forest-975: #0b120e;
+  --forest-950: #101a15;
+  --forest-900: #1a2a21;
+  --forest-800: #22362b;
+  --forest-700: #2d4537;
+  --sage-300: #b7c2b4;
+  --cream-25: #fffcf7;
+  --cream-50: #fbf6ee;
+  --cream-100: #f3e6d2;
+  --linen: #efe3d0;
+  --gold: #e6bf7c;
+  --gold-2: #d9a85a;
+  --copper: #a8323a;      /* cranberry: italic accents */
+  --berry: #8f2c32;
+  --berry-2: #b23a3f;
+}
+
+/* Warm, candle-lit photo treatment */
+.holiday .hero-media img,
+.holiday .ed-media img,
+.holiday .dg-track img,
+.holiday .suites-bg { filter: saturate(1.08) sepia(.14) brightness(.96); }
+.holiday .hero-shade { background: radial-gradient(ellipse 80% 70% at 50% 40%, rgba(255, 170, 80, .12), transparent 60%), linear-gradient(180deg, rgba(11, 18, 14, .55) 0%, rgba(11, 18, 14, .2) 35%, rgba(11, 18, 14, .4) 60%, rgba(11, 18, 14, .88) 100%); }
+.holiday .hero h1 em { color: var(--gold); }
+.holiday .kicker { color: var(--gold); }
+
+/* Snow canvas */
+.snow { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1; }
+.hero .hero-content, .hero .hero-book, .hero .scroll-cue { z-index: 2; }
+
+/* String lights garland */
+.garland { position: relative; height: 46px; overflow: hidden; background: var(--forest-950); }
+.garland::before { content: ""; position: absolute; left: -5%; right: -5%; top: -34px; height: 60px; border-bottom: 1.5px solid rgba(230, 191, 124, .35); border-radius: 0 0 50% 50% / 0 0 100% 100%; }
+.garland ul { list-style: none; margin: 0; padding: 0 2%; display: flex; justify-content: space-between; position: relative; }
+.garland li { width: 9px; height: 13px; border-radius: 50% 50% 45% 45%; background: var(--c, var(--gold)); box-shadow: 0 0 12px 3px var(--c, var(--gold)); margin-top: calc(10px + var(--sag, 0px)); opacity: .9; animation: twinkle 2.6s ease-in-out infinite; animation-delay: var(--d, 0s); }
+.garland li::before { content: ""; display: block; width: 5px; height: 4px; margin: -4px auto 0; background: #3c4a40; border-radius: 1px; }
+.garland li:nth-child(4n+1) { --c: #ffd58a; }
+.garland li:nth-child(4n+2) { --c: #ff6b5e; }
+.garland li:nth-child(4n+3) { --c: #fff1c9; }
+.garland li:nth-child(4n+4) { --c: #f4a64b; }
+@keyframes twinkle { 0%, 100% { opacity: .95; } 50% { opacity: .35; box-shadow: 0 0 4px 1px var(--c, var(--gold)); } }
+
+/* Cozy list */
+.cozy { padding: clamp(90px, 12vw, 160px) var(--gutter); max-width: 1300px; margin: 0 auto; }
+.cozy-head { max-width: 640px; margin: 0 auto 3.5rem; text-align: center; }
+.cozy-head p:not(.eyebrow) { color: var(--muted); }
+.cozy-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.2rem; }
+.cozy-item { position: relative; background: var(--cream-25); border: 1px solid var(--linen); padding: 2rem 1.8rem; overflow: hidden; transition: transform .6s var(--ease), box-shadow .6s var(--ease); }
+.cozy-item:hover { transform: translateY(-4px); box-shadow: 0 24px 40px -30px rgba(143, 44, 50, .6); }
+.cozy-item .ico { display: grid; place-items: center; width: 54px; height: 54px; border-radius: 50%; background: var(--forest-900); color: var(--gold); margin-bottom: 1.2rem; }
+.cozy-item .ico svg { width: 26px; height: 26px; }
+.cozy-item h3 { color: var(--forest-900); }
+.cozy-item p { color: var(--muted); margin: 0; font-size: .95rem; }
+.cozy-item.feature { grid-column: span 2; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1.6rem; align-items: center; padding: 0; background: var(--forest-900); border: 0; color: var(--cream-50); }
+.cozy-item.feature .zoom { height: 100%; min-height: 280px; }
+.cozy-item.feature > div:last-child { padding: 2rem 2rem 2rem 0; }
+.cozy-item:last-child:not(.feature) { grid-column: 1 / -1; }
+.cozy-item.feature h3 { color: var(--cream-50); }
+.cozy-item.feature p { color: var(--sage-300); }
+
+/* Flicker on the "fireside" icon */
+.flame { transform-origin: 50% 90%; animation: flicker 1.8s ease-in-out infinite; }
+@keyframes flicker { 0%, 100% { transform: scale(1) rotate(-1deg); } 35% { transform: scale(1.06, .96) rotate(2deg); } 70% { transform: scale(.97, 1.04) rotate(-2deg); } }
+
+/* Snowy note on the events list */
+.season-note { max-width: 1240px; margin: 2rem auto 0; font-size: .82rem; color: var(--sage-300); text-align: center; }
+
+@media (max-width: 1000px) {
+  .cozy-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 760px) {
+  .cozy-grid { grid-template-columns: minmax(0, 1fr); }
+  .cozy-item.feature { grid-column: auto; grid-template-columns: minmax(0, 1fr); }
+  .cozy-item.feature > div:last-child { padding: 0 1.6rem 1.8rem; }
+  .garland li:nth-child(n+15) { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .snow { display: none; }
+}
+.cozy-item.feature .ico { background: rgba(230, 191, 124, .14); }

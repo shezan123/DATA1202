@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Winter at the Manor · The Royal Manor Inn</title>
+  <meta name="description" content="Spend the holidays at The Royal Manor Inn: fireside evenings, a 4 PM wine hour, three-course breakfasts and Old Town Niagara-on-the-Lake at its most festive.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400;1,500&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="assets/holiday.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='16' fill='%23151a14'/><text x='16' y='21' font-family='Georgia' font-size='13' fill='%23d3a976' text-anchor='middle'>RM</text></svg>">
+</head>
+<body class="is-loading holiday">
+
+<!-- Opening curtain -->
+<div class="curtain" aria-hidden="true">
+  <div class="curtain-mark">
+    <span class="monogram">RM</span>
+    <span class="curtain-name">Winter at the Manor</span>
+    <span class="curtain-line"></span>
+  </div>
+</div>
+
+<!-- Header: Menu · Logo · Book -->
+<header class="site-header">
+  <button class="menu-btn" aria-expanded="false" aria-controls="menu"><span class="menu-lines"><i></i><i></i></span><span class="menu-label">Menu</span></button>
+  <a class="logo" href="#top" aria-label="The Royal Manor Inn, home">
+    <span class="logo-name">The Royal Manor Inn</span>
+    <span class="logo-sub">Winter at the Manor</span>
+  </a>
+  <a class="book-btn" href="#book">Reserve</a>
+</header>
+
+<!-- Full-screen menu -->
+<div class="menu" id="menu" aria-hidden="true">
+  <div class="menu-visual" aria-hidden="true">
+    <img data-menu-img="rooms" src="assets/img/room-york.jpg" alt="">
+    <img data-menu-img="manor" src="assets/img/living-room.jpg" alt="">
+    <img data-menu-img="breakfast" src="assets/img/dining.jpg" alt="">
+    <img data-menu-img="explore" src="assets/img/exterior.jpg" alt="">
+    <img data-menu-img="book" src="assets/img/porch.jpg" alt="">
+  </div>
+  <nav class="menu-nav">
+    <a href="#cozy" data-menu="manor"><span>01</span>Cozy season</a>
+    <a href="#rooms" data-menu="rooms"><span>02</span>Rooms</a>
+    <a href="#breakfast" data-menu="breakfast"><span>03</span>Breakfast</a>
+    <a href="#explore" data-menu="explore"><span>04</span>Holiday in Old Town</a>
+    <a href="#book" data-menu="book"><span>05</span>Reserve</a>
+    <a href="index.html" data-menu="explore"><span>06</span>Year-round site</a>
+  </nav>
+  <div class="menu-foot">
+    <a href="tel:+12898688688">+1 289-868-8688</a>
+    <span>242 Ricardo Street, Niagara-on-the-Lake</span>
+  </div>
+</div>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero" data-snow>
+    <div class="hero-media"><img src="assets/img/porch.jpg" alt="The Manor's covered porch with its stone fireplace and deep sofas" fetchpriority="high"></div>
+    <div class="hero-shade"></div>
+    <div class="hero-content">
+      <p class="kicker rise">The holiday season in Old Town</p>
+      <h1>
+        <span class="line"><span>Firelight, frost</span></span>
+        <span class="line"><span><em>&amp; slow mornings</em></span></span>
+      </h1>
+    </div>
+
+    <form class="hero-book rise" data-booking aria-label="Check availability">
+      <p class="panel-title">Plan a winter escape</p>
+      <div class="hero-book-row">
+        <label><span>Arrive</span><input type="date" name="checkin" required></label>
+        <label><span>Depart</span><input type="date" name="checkout" required></label>
+        <label><span>Guests</span><select name="adults"><option value="1">1</option><option value="2" selected>2</option></select></label>
+      </div>
+      <button class="btn btn-gold btn-block" type="submit">Check availability</button>
+      <p class="form-msg" role="status" aria-live="polite"></p>
+    </form>
+
+    <a class="scroll-cue" href="#intro" aria-label="Scroll to content"><span></span></a>
+  </section>
+
+  <!-- INTRO with rotating emblem -->
+  <section class="intro" id="intro">
+    <div class="emblem" aria-hidden="true">
+      <svg viewBox="0 0 200 200" class="emblem-ring" data-rotate>
+        <defs><path id="circle" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+        <text><textPath href="#circle">WINTER AT THE ROYAL MANOR INN · NIAGARA-ON-THE-LAKE ·</textPath></text>
+      </svg>
+      <span class="emblem-core">RM</span>
+    </div>
+    <p class="eyebrow reveal">The season</p>
+    <h2 class="reveal">When the snow falls, <em>the Manor glows</em></h2>
+    <p class="reveal">Old Town Niagara-on-the-Lake is at its most magical in winter: lights along Queen Street, festive theatre at the Shaw, and the hush of snow over Fort George. Come back to the fireside porch, a glass of wine at our 4 PM social hour, and a quiet room with luxurious linens.</p>
+    <p class="reveal">Built in 1832 and renovated in 2024, the Manor has been welcoming travellers in from the cold for nearly two centuries.</p>
+  </section>
+
+  <!-- ROOMS: hover list, background crossfade -->
+  <section class="suites" id="rooms">
+    <div class="suites-media" aria-hidden="true">
+      <div class="suites-bg is-visible" data-bg="default" style="background-image:url('assets/img/living-room.jpg')"></div>
+      <div class="suites-bg" data-bg="The Clarence" style="background-image:url('assets/img/room-clarence.jpg')"></div>
+      <div class="suites-bg" data-bg="The Windsor" style="background-image:url('assets/img/room-windsor.jpg')"></div>
+      <div class="suites-bg" data-bg="The York" style="background-image:url('assets/img/room-york.jpg')"></div>
+      <div class="suites-bg" data-bg="The Kent" style="background-image:url('assets/img/room-kent.jpg')"></div>
+      <div class="suites-bg suites-bg-empty" data-bg="The Sussex"></div>
+      <div class="suites-bg" data-bg="The Cornwall" style="background-image:url('assets/img/room-cornwall.jpg')"></div>
+      <div class="suites-shade"></div>
+    </div>
+
+    <div class="suites-inner">
+      <div class="suites-head">
+        <p class="eyebrow light">Accommodations</p>
+        <h2>Six rooms <em>to hibernate in</em></h2>
+        <p>Every room has a private bath, L'Occitane products, luxurious linens, a smart TV with Netflix and fast Wi-Fi.</p>
+      </div>
+
+      <ul class="suites-list">
+        <li><button data-room="The Clarence" style="--dot:#2f8f8a">The Clarence</button></li>
+        <li><button data-room="The Windsor" style="--dot:#7a4fb0">The Windsor</button></li>
+        <li><button data-room="The York" style="--dot:#8fa86c">The York</button></li>
+        <li><button data-room="The Kent" style="--dot:#4f7cc4">The Kent</button></li>
+        <li><button data-room="The Sussex" style="--dot:#e3b53c">The Sussex</button></li>
+        <li><button data-room="The Cornwall" style="--dot:#b39478">The Cornwall</button></li>
+      </ul>
+
+      <div class="suites-detail" aria-live="polite">
+        <p class="sd-meta" data-sd="meta">Choose a room</p>
+        <p class="sd-text" data-sd="text">Hover or tap a room name to step inside.</p>
+        <button class="btn btn-outline-light" data-sd="book" hidden>Reserve this room</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="garland" aria-hidden="true"><ul><li style="--d:0.00s;--sag:0px"></li><li style="--d:0.37s;--sag:2px"></li><li style="--d:0.74s;--sag:4px"></li><li style="--d:1.11s;--sag:6px"></li><li style="--d:1.48s;--sag:7px"></li><li style="--d:1.85s;--sag:9px"></li><li style="--d:2.22s;--sag:10px"></li><li style="--d:2.59s;--sag:11px"></li><li style="--d:0.36s;--sag:12px"></li><li style="--d:0.73s;--sag:13px"></li><li style="--d:1.10s;--sag:13px"></li><li style="--d:1.47s;--sag:13px"></li><li style="--d:1.84s;--sag:14px"></li><li style="--d:2.21s;--sag:13px"></li><li style="--d:2.58s;--sag:13px"></li><li style="--d:0.35s;--sag:13px"></li><li style="--d:0.72s;--sag:12px"></li><li style="--d:1.09s;--sag:11px"></li><li style="--d:1.46s;--sag:10px"></li><li style="--d:1.83s;--sag:9px"></li><li style="--d:2.20s;--sag:7px"></li><li style="--d:2.57s;--sag:6px"></li><li style="--d:0.34s;--sag:4px"></li><li style="--d:0.71s;--sag:2px"></li><li style="--d:1.08s;--sag:0px"></li></ul></div>
+
+  <!-- COZY LIST -->
+  <section class="cozy" id="cozy">
+    <div class="cozy-head">
+      <p class="eyebrow reveal">Cozy season</p>
+      <h2 class="reveal">Everything you need <em>to stay in</em></h2>
+      <p class="reveal">Some days call for exploring. Others call for a fire, a book and nowhere to be.</p>
+    </div>
+    <div class="cozy-grid">
+      <article class="cozy-item feature reveal">
+        <div class="zoom"><img src="assets/img/porch.jpg" alt="Covered porch with a stone fireplace and deep sofas" loading="lazy"></div>
+        <div>
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path class="flame" d="M12 3c1 3 4 4.5 4 8.5A4 4 0 0 1 8 12c0-1.6.8-2.6 1.6-3.4.2 1.3.9 2 1.6 2.2C11 8.2 11 5.4 12 3Z"/><path d="M5 21h14M7 17h10"/></svg></span>
+          <h3>The fireside porch</h3>
+          <p>Wrap up on the covered porch beside the stone fireplace, sink into the deep sofas and watch the snow settle over the garden and koi pond.</p>
+        </div>
+      </article>
+      <article class="cozy-item reveal">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 3h8l-1 6a3 3 0 0 1-6 0L8 3ZM12 12v8M8.5 21h7"/></svg></span>
+        <h3>4 PM wine hour</h3>
+        <p>Complimentary wine every afternoon, a warm way to meet fellow guests after a day in town.</p>
+      </article>
+      <article class="cozy-item reveal">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 11h13a0 0 0 0 1 0 0v1a6 6 0 0 1-6 6H10a6 6 0 0 1-6-6v-1ZM17 12h1.5a2 2 0 0 1 0 4H16M8 4c0 1.5 1 1.5 1 3M12 3c0 1.5 1 1.5 1 3"/></svg></span>
+        <h3>Three-course breakfast</h3>
+        <p>Slow, hearty winter mornings in the dining room, with fine coffee and teas.</p>
+      </article>
+      <article class="cozy-item reveal">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 18v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6M3 14h18M5 10V6h14v4M3 18v2M21 18v2"/></svg></span>
+        <h3>Luxurious linens</h3>
+        <p>Plush beds, premium L'Occitane bath products, and a smart TV with Netflix for movie nights in.</p>
+      </article>
+      <article class="cozy-item reveal">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 17h14l-1.5-5h-11L5 17ZM7 12l1.5-4h7L17 12M7 20v-3M17 20v-3"/></svg></span>
+        <h3>Reserved parking</h3>
+        <p>No circling snowy Old Town looking for a spot. One reserved space is yours for the whole stay.</p>
+      </article>
+      <article class="cozy-item reveal">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v18M4.2 7.5l15.6 9M4.2 16.5l15.6-9M9.5 4.5 12 6l2.5-1.5M9.5 19.5 12 18l2.5 1.5"/></svg></span>
+        <h3>Snowy walks</h3>
+        <p>The trails around Fort George and the frozen lakefront are a few minutes from the door.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- DRAG GALLERY -->
+  <section class="drag-gallery" aria-label="Photo gallery">
+    <div class="dg-viewport">
+      <div class="dg-track">
+        <figure class="portrait"><img src="assets/img/room-kent.jpg" alt="The Kent" loading="lazy" draggable="false"><figcaption>The Kent</figcaption></figure>
+        <figure><img src="assets/img/living-room.jpg" alt="Living room" loading="lazy" draggable="false"><figcaption>Living room</figcaption></figure>
+        <figure class="portrait"><img src="assets/img/dining.jpg" alt="Dining room" loading="lazy" draggable="false"><figcaption>Dining room</figcaption></figure>
+        <figure><img src="assets/img/room-york.jpg" alt="The York" loading="lazy" draggable="false"><figcaption>The York</figcaption></figure>
+        <figure class="portrait"><img src="assets/img/room-windsor.jpg" alt="The Windsor" loading="lazy" draggable="false"><figcaption>The Windsor</figcaption></figure>
+        <figure><img src="assets/img/porch.jpg" alt="Fireside porch" loading="lazy" draggable="false"><figcaption>Fireside porch</figcaption></figure>
+        <figure class="portrait"><img src="assets/img/room-clarence.jpg" alt="The Clarence" loading="lazy" draggable="false"><figcaption>The Clarence</figcaption></figure>
+        <figure><img src="assets/img/room-cornwall.jpg" alt="The Cornwall" loading="lazy" draggable="false"><figcaption>The Cornwall</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- BREAKFAST -->
+  <section class="editorial reverse" id="breakfast">
+    <div class="ed-media zoom tall"><img src="assets/img/dining.jpg" alt="Dining room overlooking the garden" loading="lazy"></div>
+    <div class="ed-copy">
+      <p class="eyebrow reveal">Breakfast</p>
+      <h2 class="reveal">Winter mornings, <em>done slowly</em></h2>
+      <p class="reveal">Served in our dining room overlooking the garden and koi pond: fresh, locally sourced ingredients, a fine selection of coffee and teas, and vegetarian, vegan and allergy-friendly options on request.</p>
+      <ul class="lines reveal">
+        <li><span>Included</span>with every stay</li>
+        <li><span>Local</span>seasonal ingredients</li>
+        <li><span>Tailored</span>to dietary needs</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- QUOTE -->
+  <section class="quote">
+    <blockquote class="reveal">“Come in from the cold. The wine hour starts at four.”</blockquote>
+  </section>
+
+  <!-- EXPLORE -->
+  <section class="explore" id="explore">
+    <div class="explore-head">
+      <p class="eyebrow light reveal">Holiday in Old Town</p>
+      <h2 class="reveal">The season, <em>on your doorstep</em></h2>
+      <p class="reveal">From festive theatre to icewine tastings, here’s how to spend a winter stay. Your innkeeper is happy to book any of it.</p>
+    </div>
+    <ol class="explore-list">
+      <li class="reveal">
+        <button class="ex-card" data-place="shaw" aria-haspopup="dialog">
+          <span class="n">01</span><h3>Holiday theatre</h3><p>The Shaw Festival’s season runs into December with festive productions.</p><b>5–10 min walk</b><span class="ex-cta">Discover <i aria-hidden="true">+</i></span>
+        </button>
+        <div class="ex-detail" hidden>
+          <p class="exd-lead">The Shaw Festival’s theatres are a short walk away, and the season carries on into the holidays with festive productions.</p>
+          <ul><li>All three theatres within walking distance</li><li>Matinees leave the evening free for a long dinner</li><li>Festive shows tend to sell out, so book ahead</li></ul>
+          <p class="exd-tip"><span>Innkeeper's tip</span>Tell us which show you’re seeing and we’ll book an early dinner nearby, so you’re never rushing to curtain in the cold.</p>
+          <a class="exd-map" data-q="Shaw Festival Theatre Niagara-on-the-Lake"></a>
+        </div>
+      </li>
+      <li class="reveal">
+        <button class="ex-card" data-place="oldtown" aria-haspopup="dialog">
+          <span class="n">02</span><h3>Old Town at Christmas</h3><p>Lights along Queen Street, boutique shopping and warm cafés.</p><b>5 min walk</b><span class="ex-cta">Discover <i aria-hidden="true">+</i></span>
+        </button>
+        <div class="ex-detail" hidden>
+          <p class="exd-lead">Queen Street dresses up for the season, with lit storefronts, the clock tower and some of Ontario’s best boutique shopping for gifts.</p>
+          <ul><li>Independent shops for one-of-a-kind gifts</li><li>Cafés and wine bars to warm up in</li><li>Historic streetscapes that look their best under snow</li></ul>
+          <p class="exd-tip"><span>Innkeeper's tip</span>Go at dusk, when the lights come on, then stop for a pub supper with live music on the way home.</p>
+          <a class="exd-map" data-q="Queen Street Niagara-on-the-Lake"></a>
+        </div>
+      </li>
+      <li class="reveal">
+        <button class="ex-card" data-place="icewine" aria-haspopup="dialog">
+          <span class="n">03</span><h3>Icewine season</h3><p>Niagara’s famous icewine is harvested in the deep cold of winter.</p><b>Short drive</b><span class="ex-cta">Discover <i aria-hidden="true">+</i></span>
+        </button>
+        <div class="ex-detail" hidden>
+          <p class="exd-lead">Icewine grapes are picked frozen on the vine in the coldest weeks of winter. Niagara-on-the-Lake is one of the world’s great icewine regions, and the region celebrates with an Icewine Festival each January.</p>
+          <ul><li>Nearly 40 wineries nearby</li><li><strong>Château des Charmes</strong>, <strong>Pillitteri</strong> and our favourite, <strong>AMO</strong></li><li>Icewine tastings at many estates</li></ul>
+          <p class="exd-tip"><span>Innkeeper's tip</span>We can arrange a winery dinner with the perfect wine pairing. Ask us when you book.</p>
+          <a class="exd-map" data-q="wineries Niagara-on-the-Lake"></a>
+        </div>
+      </li>
+      <li class="reveal">
+        <button class="ex-card" data-place="lights" aria-haspopup="dialog">
+          <span class="n">04</span><h3>Winter Festival of Lights</h3><p>Niagara Falls lights up each winter, a short drive along the parkway.</p><b>~25 min drive</b><span class="ex-cta">Discover <i aria-hidden="true">+</i></span>
+        </button>
+        <div class="ex-detail" hidden>
+          <p class="exd-lead">Each winter, Niagara Falls hosts the Winter Festival of Lights, with illuminated displays along the river and the Falls lit in colour after dark.</p>
+          <ul><li>A scenic evening drive along the Niagara Parkway</li><li>The Falls illuminated after dark</li><li>Easy to pair with dinner on the way back</li></ul>
+          <p class="exd-tip"><span>Innkeeper's tip</span>Wrap up warm and go after sunset, then come home to the fireside porch for a nightcap.</p>
+          <a class="exd-map" data-q="Niagara Falls Ontario"></a>
+        </div>
+      </li>
+      <li class="reveal">
+        <button class="ex-card" data-place="fort" aria-haspopup="dialog">
+          <span class="n">05</span><h3>Snowy Fort George</h3><p>Quiet, snow-covered trails and history right next door.</p><b>3 min walk</b><span class="ex-cta">Discover <i aria-hidden="true">+</i></span>
+        </button>
+        <div class="ex-detail" hidden>
+          <p class="exd-lead">Fort George, the War of 1812 National Historic Site, sits beside the Manor, and its wooded grounds are beautifully quiet in winter.</p>
+          <ul><li>Forest trails bordering the fort</li><li>A connection to the Manor’s own 1812 history</li><li>Lovely in fresh morning snow</li></ul>
+          <p class="exd-tip"><span>Innkeeper's tip</span>Take a crisp walk before breakfast, and you’ll come back to a warm dining room and three courses.</p>
+          <a class="exd-map" data-q="Fort George National Historic Site Niagara-on-the-Lake"></a>
+        </div>
+      </li>
+      <li class="reveal">
+        <button class="ex-card" data-place="lake" aria-haspopup="dialog">
+          <span class="n">06</span><h3>The winter lakefront</h3><p>Lake Ontario in winter, with the gazebo at Queen’s Royal Park.</p><b>5 min walk</b><span class="ex-cta">Discover <i aria-hidden="true">+</i></span>
+        </button>
+        <div class="ex-detail" hidden>
+          <p class="exd-lead">The lakefront is wild and beautiful in winter, with ice along the shore, big skies, and the gazebo at Queen’s Royal Park.</p>
+          <ul><li>Sunset over the frozen shoreline</li><li>A short, bracing stroll from the Manor</li><li>Back in time for the 4 PM wine hour</li></ul>
+          <p class="exd-tip"><span>Innkeeper's tip</span>Bring a thermos. We’re happy to fill it with tea or coffee before you head out.</p>
+          <a class="exd-map" data-q="Queen's Royal Park Niagara-on-the-Lake"></a>
+        </div>
+      </li>
+    </ol>
+    <p class="season-note reveal">Event dates change from year to year. Ask us and we’ll check this season’s calendar for your stay.</p>
+  </section>
+
+
+  <!-- BOOK -->
+  <section class="book" id="book" data-snow>
+    <div class="book-media zoom"><img src="assets/img/dining.jpg" alt="" loading="lazy"></div>
+    <div class="book-shade"></div>
+    <div class="book-inner" style="z-index:2">
+      <div class="book-copy">
+        <p class="eyebrow light reveal">Book direct</p>
+        <h2 class="reveal">Reserve <em>a winter stay</em></h2>
+        <p class="reveal">Choose your dates and we’ll take you to our secure booking page for live availability and rates. Holiday weekends go quickly, so book direct for the best rate and a direct line to your innkeeper.</p>
+        <p class="reveal small">A 50% deposit secures your booking. Questions? <a href="tel:+12898688688">+1 289-868-8688</a></p>
+      </div>
+
+      <form class="booking-card reveal" data-booking aria-label="Book a room">
+        <div class="row">
+          <label><span>Arrive</span><input type="date" name="checkin" required></label>
+          <label><span>Depart</span><input type="date" name="checkout" required></label>
+        </div>
+        <div class="row">
+          <label><span>Guests</span><select name="adults"><option value="1">1 guest</option><option value="2" selected>2 guests</option></select></label>
+          <label><span>Room</span>
+            <select name="room">
+              <option value="">Any room</option>
+              <option>The Clarence</option><option>The Windsor</option><option>The York</option>
+              <option>The Kent</option><option>The Sussex</option><option>The Cornwall</option>
+            </select>
+          </label>
+        </div>
+        <div class="stay-summary" aria-live="polite">
+          <div><span>Nights</span><strong data-nights>-</strong></div>
+          <div><span>Arrive</span><strong data-arrive>-</strong></div>
+          <div><span>Depart</span><strong data-depart>-</strong></div>
+        </div>
+        <p class="room-hint" hidden></p>
+        <button class="btn btn-gold btn-block" type="submit">See availability &amp; rates</button>
+        <p class="form-msg" role="status" aria-live="polite"></p>
+        <p class="fine">Opens our secure booking page, powered by Cloudbeds, in a new tab.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<div class="garland" aria-hidden="true"><ul><li style="--d:0.00s;--sag:0px"></li><li style="--d:0.37s;--sag:2px"></li><li style="--d:0.74s;--sag:4px"></li><li style="--d:1.11s;--sag:6px"></li><li style="--d:1.48s;--sag:7px"></li><li style="--d:1.85s;--sag:9px"></li><li style="--d:2.22s;--sag:10px"></li><li style="--d:2.59s;--sag:11px"></li><li style="--d:0.36s;--sag:12px"></li><li style="--d:0.73s;--sag:13px"></li><li style="--d:1.10s;--sag:13px"></li><li style="--d:1.47s;--sag:13px"></li><li style="--d:1.84s;--sag:14px"></li><li style="--d:2.21s;--sag:13px"></li><li style="--d:2.58s;--sag:13px"></li><li style="--d:0.35s;--sag:13px"></li><li style="--d:0.72s;--sag:12px"></li><li style="--d:1.09s;--sag:11px"></li><li style="--d:1.46s;--sag:10px"></li><li style="--d:1.83s;--sag:9px"></li><li style="--d:2.20s;--sag:7px"></li><li style="--d:2.57s;--sag:6px"></li><li style="--d:0.34s;--sag:4px"></li><li style="--d:0.71s;--sag:2px"></li><li style="--d:1.08s;--sag:0px"></li></ul></div>
+
+<footer class="site-footer">
+  <div class="foot-top">
+    <div><span class="label">Telephone</span><a href="tel:+12898688688">+1 289-868-8688</a></div>
+    <div class="foot-logo"><span class="monogram">RM</span>The Royal Manor Inn</div>
+    <div class="right"><span class="label">Follow</span><a href="https://www.instagram.com/theroyalmanorinn/" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.facebook.com/TheRoyalManorInn/" target="_blank" rel="noopener">Facebook</a></div>
+  </div>
+  <div class="foot-bottom">
+    <a href="https://www.google.com/maps/search/?api=1&amp;query=242+Ricardo+Street+Niagara-on-the-Lake+ON" target="_blank" rel="noopener">242 Ricardo Street, Niagara-on-the-Lake, ON L0S 1J0</a>
+    <span>Licence #042-2024 · © <span id="year"></span></span>
+  </div>
+</footer>
+
+<a class="mobile-book" href="#book">Reserve your stay</a>
+<div class="drag-cursor" aria-hidden="true">Drag</div>
+
+<dialog class="ex-modal" aria-labelledby="exm-title">
+  <div class="exm-sheet">
+    <span class="exm-grip" aria-hidden="true"></span>
+    <button class="exm-close" aria-label="Close">×</button>
+    <p class="exm-meta"><span class="exm-n"></span><span class="exm-dist"></span></p>
+    <h3 id="exm-title"></h3>
+    <div class="exm-body"></div>
+    <div class="exm-actions">
+      <a class="btn btn-gold exm-map" target="_blank" rel="noopener">Get directions</a>
+      <a class="btn btn-outline exm-book" href="#book">Plan your stay</a>
+    </div>
+    <div class="exm-nav">
+      <button class="exm-prev" aria-label="Previous place">←</button>
+      <span class="exm-count" aria-live="polite"></span>
+      <button class="exm-next" aria-label="Next place">→</button>
+    </div>
+  </div>
+</dialog>
+
+
+<script src="assets/main.js"></script>
+<script src="assets/snow.js"></script>
+</body>
+</html>

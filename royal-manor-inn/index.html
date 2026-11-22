@@ -48,6 +48,7 @@
     <a href="#explore" data-menu="explore"><span>04</span>Explore</a>
     <a href="#faq" data-menu="explore"><span>05</span>Good to know</a>
     <a href="#book" data-menu="book"><span>06</span>Reserve</a>
+    <a href="holiday.html" data-menu="manor"><span>07</span>Winter at the Manor</a>
   </nav>
   <div class="menu-foot">
     <a href="tel:+12898688688">+1 289-868-8688</a>
@@ -66,6 +67,7 @@
         <span class="line"><span>A country manor</span></span>
         <span class="line"><span><em>for slow mornings</em></span></span>
       </h1>
+      <a class="season-pill rise" href="holiday.html">❄ Winter at the Manor</a>
     </div>
 
     <form class="hero-book rise" data-booking aria-label="Check availability">
@@ -190,12 +192,72 @@
       <p class="reveal">We're half a kilometre from the heart of Old Town. Just ask, and your innkeeper will arrange the wine pairing, the theatre seats or the dinner reservation.</p>
     </div>
     <ol class="explore-list">
-      <li class="reveal"><span class="n">01</span><h3>Shaw Festival</h3><p>Every theatre is an easy walk away. Ask us about dinner-and-a-show evenings.</p><b>5–10 min walk</b></li>
-      <li class="reveal"><span class="n">02</span><h3>Fort George</h3><p>The War of 1812 fort sits right next door, bordered by forest and parkland.</p><b>3 min walk</b></li>
-      <li class="reveal"><span class="n">03</span><h3>Wine country</h3><p>Nearly 40 wineries: Between the Lines, Château des Charmes, Pillitteri and our favourite, AMO.</p><b>Short drive or bike</b></li>
-      <li class="reveal"><span class="n">04</span><h3>Lake &amp; river</h3><p>Paddleboarding, kayaking and riverside cycling along the Niagara Parkway.</p><b>5 min walk</b></li>
-      <li class="reveal"><span class="n">05</span><h3>Dining</h3><p>Treadwell, The Epicurean, Corks, HOB NOB, The Olde Angel Inn, Noble and more.</p><b>All walkable</b></li>
-      <li class="reveal"><span class="n">06</span><h3>Niagara Falls</h3><p>The Falls, the Butterfly Conservatory, casinos and world-class golf.</p><b>~25 min drive</b></li>
+      <li class="reveal">
+        <button class="ex-card" data-place="shaw" aria-haspopup="dialog">
+          <span class="n">01</span><h3>Shaw Festival</h3><p>Every theatre is an easy walk away. Ask us about dinner-and-a-show evenings.</p><b>5–10 min walk</b><span class="ex-cta">Discover <i aria-hidden="true">+</i></span>
+        </button>
+        <div class="ex-detail" hidden>
+          <p class="exd-lead">One of North America's great repertory theatre companies, with its stages right here in Old Town.</p>
+          <ul><li>Three theatres, all within a comfortable walk of the Manor</li><li>Seasons run from spring into the holidays</li><li>Matinees leave the evening free for a long dinner</li></ul>
+          <p class="exd-tip"><span>Innkeeper's tip</span>Tell us which show you're seeing and we'll book an early dinner nearby so you aren't rushing to curtain.</p>
+          <a class="exd-map" data-q="Shaw Festival Theatre Niagara-on-the-Lake"></a>
+        </div>
+      </li>
+      <li class="reveal">
+        <button class="ex-card" data-place="fort" aria-haspopup="dialog">
+          <span class="n">02</span><h3>Fort George</h3><p>The War of 1812 fort sits right next door, bordered by forest and parkland.</p><b>3 min walk</b><span class="ex-cta">Discover <i aria-hidden="true">+</i></span>
+        </button>
+        <div class="ex-detail" hidden>
+          <p class="exd-lead">A National Historic Site that was British Army headquarters during the War of 1812, the same war in which the Manor's former owner, Captain James Crooks, served.</p>
+          <ul><li>Reconstructed earthworks, blockhouses and officers' quarters</li><li>Costumed interpreters and demonstrations in season</li><li>Wooded trails link it to the Niagara River and Commons</li></ul>
+          <p class="exd-tip"><span>Innkeeper's tip</span>The forest you see from The Cornwall borders the fort, so go early in the morning for a quiet walk before breakfast.</p>
+          <a class="exd-map" data-q="Fort George National Historic Site Niagara-on-the-Lake"></a>
+        </div>
+      </li>
+      <li class="reveal">
+        <button class="ex-card" data-place="wine" aria-haspopup="dialog">
+          <span class="n">03</span><h3>Wine country</h3><p>Nearly 40 wineries: Between the Lines, Château des Charmes, Pillitteri and our favourite, AMO.</p><b>Short drive or bike</b><span class="ex-cta">Discover <i aria-hidden="true">+</i></span>
+        </button>
+        <div class="ex-detail" hidden>
+          <p class="exd-lead">Niagara-on-the-Lake is home to nearly 40 member wineries, from rustic boutique barns to architecturally stunning estates. It's also one of the world's great icewine regions.</p>
+          <ul><li><strong>Between the Lines</strong>: a relaxed, family-run barn</li><li><strong>Château des Charmes</strong> and <strong>Pillitteri</strong>: grand estates</li><li><strong>AMO Winery</strong>: our local favourite</li></ul>
+          <p class="exd-tip"><span>Innkeeper's tip</span>Craving something fancy? We can arrange a fine-dining experience at a local winery, complete with the perfect wine pairing.</p>
+          <a class="exd-map" data-q="wineries Niagara-on-the-Lake"></a>
+        </div>
+      </li>
+      <li class="reveal">
+        <button class="ex-card" data-place="lake" aria-haspopup="dialog">
+          <span class="n">04</span><h3>Lake &amp; river</h3><p>Paddleboarding, kayaking and riverside cycling along the Niagara Parkway.</p><b>5 min walk</b><span class="ex-cta">Discover <i aria-hidden="true">+</i></span>
+        </button>
+        <div class="ex-detail" hidden>
+          <p class="exd-lead">The Niagara River runs just across the street, and the shore of Lake Ontario is a few minutes' stroll away.</p>
+          <ul><li>Sunset over the lake from Queen's Royal Park and its gazebo</li><li>Riverside cycling on the Niagara River Recreation Trail</li><li>Paddleboarding and kayaking in the warmer months</li></ul>
+          <p class="exd-tip"><span>Innkeeper's tip</span>Bring your bike, because there's room in our garage. The riverside path starts almost at our door.</p>
+          <a class="exd-map" data-q="Queen's Royal Park Niagara-on-the-Lake"></a>
+        </div>
+      </li>
+      <li class="reveal">
+        <button class="ex-card" data-place="dining" aria-haspopup="dialog">
+          <span class="n">05</span><h3>Dining</h3><p>Treadwell, The Epicurean, Corks, HOB NOB, The Olde Angel Inn, Noble and more.</p><b>All walkable</b><span class="ex-cta">Discover <i aria-hidden="true">+</i></span>
+        </button>
+        <div class="ex-detail" hidden>
+          <p class="exd-lead">From fine dining to a pint by the fire, everything is within walking distance.</p>
+          <ul><li><strong>Fine dining</strong>: Treadwell Cuisine, Noble, Tiara, Aura on the Lake</li><li><strong>Casual</strong>: The Epicurean, Corks Wine Bar &amp; Eatery, Sunset Grill, Shaw Cafe</li><li><strong>Pub fare</strong>: The Olde Angel Inn</li><li><strong>More nearby</strong>: 11th Post, NOTL Bar &amp; Restaurant, HOB NOB, Cannery Restaurant</li></ul>
+          <p class="exd-tip"><span>Innkeeper's tip</span>Fancy something easy? Take a five-minute stroll to Old Town for live music, an ice-cold beer and fish &amp; chips at the local pub.</p>
+          <a class="exd-map" data-q="restaurants Queen Street Niagara-on-the-Lake"></a>
+        </div>
+      </li>
+      <li class="reveal">
+        <button class="ex-card" data-place="falls" aria-haspopup="dialog">
+          <span class="n">06</span><h3>Niagara Falls</h3><p>The Falls, the Butterfly Conservatory, casinos and world-class golf.</p><b>~25 min drive</b><span class="ex-cta">Discover <i aria-hidden="true">+</i></span>
+        </button>
+        <div class="ex-detail" hidden>
+          <p class="exd-lead">Follow the scenic Niagara Parkway south along the river to one of the world's great natural wonders.</p>
+          <ul><li>The Horseshoe Falls, and the parkway drive itself</li><li>Niagara Parks Butterfly Conservatory, on the way</li><li>Casinos and world-class golf for an evening or an afternoon</li></ul>
+          <p class="exd-tip"><span>Innkeeper's tip</span>Go to the Falls in the morning, then come back to Old Town for lunch. You'll have the quiet of NOTL all afternoon.</p>
+          <a class="exd-map" data-q="Niagara Falls Ontario"></a>
+        </div>
+      </li>
     </ol>
   </section>
 
@@ -276,6 +338,26 @@
 
 <a class="mobile-book" href="#book">Reserve your stay</a>
 <div class="drag-cursor" aria-hidden="true">Drag</div>
+
+<dialog class="ex-modal" aria-labelledby="exm-title">
+  <div class="exm-sheet">
+    <span class="exm-grip" aria-hidden="true"></span>
+    <button class="exm-close" aria-label="Close">×</button>
+    <p class="exm-meta"><span class="exm-n"></span><span class="exm-dist"></span></p>
+    <h3 id="exm-title"></h3>
+    <div class="exm-body"></div>
+    <div class="exm-actions">
+      <a class="btn btn-gold exm-map" target="_blank" rel="noopener">Get directions</a>
+      <a class="btn btn-outline exm-book" href="#book">Plan your stay</a>
+    </div>
+    <div class="exm-nav">
+      <button class="exm-prev" aria-label="Previous place">←</button>
+      <span class="exm-count" aria-live="polite"></span>
+      <button class="exm-next" aria-label="Next place">→</button>
+    </div>
+  </div>
+</dialog>
+
 
 <script src="assets/main.js"></script>
 </body>

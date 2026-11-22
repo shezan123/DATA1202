@@ -252,7 +252,96 @@ $('#year').textContent = new Date().getFullYear();
 const mobileBook = $('.mobile-book');
 let bookVisible = false;
 const updateMobileBook = () => mobileBook.classList.toggle('hide', bookVisible || window.scrollY < window.innerHeight * 0.6);
-if (io) new IntersectionObserver(([en]) => { bookVisible = en.isIntersecting; updateMobileBook(); }, { threshold: 0.1 }).observe($('#book'));
+if (io) new IntersectionObserver(([en]) => { bookVisible = en.isIntersecting; updateMobileBook(); }, { threshold: 0, rootMargin: '0px 0px -10% 0px' }).observe($('#book'));
 window.addEventListener('scroll', () => { onScrollHeader(); updateMobileBook(); }, { passive: true });
 onScrollHeader();
 updateMobileBook();
+
+/* ---------- Neighbourhood pop-outs ----------
+   One shared <dialog>; content is read from the hidden .ex-detail in each card
+   (so it stays in the HTML for search engines). Bottom sheet on phones. */
+(() => {
+  const modal = $('.ex-modal');
+  const cards = $$('.ex-card');
+  if (!cards.length) return;
+  if (!modal || typeof modal.showModal !== 'function') {
+    // No <dialog> support: show the details inline instead
+    $$('.ex-detail').forEach((d) => { d.hidden = false; });
+    return;
+  }
+  const body = $('.exm-body', modal);
+  const title = $('#exm-title');
+  const num = $('.exm-n', modal);
+  const dist = $('.exm-dist', modal);
+  const count = $('.exm-count', modal);
+  const map = $('.exm-map', modal);
+  const sheet = $('.exm-sheet', modal);
+  let index = 0;
+  let opener = null;
+
+  function render(i, dir = 0) {
+    index = (i + cards.length) % cards.length;
+    const card = cards[index];
+    const detail = card.parentElement.querySelector('.ex-detail');
+    title.textContent = $('h3', card).textContent;
+    num.textContent = $('.n', card).textContent;
+    dist.textContent = $('b', card).textContent;
+    body.replaceChildren(...[...detail.children].filter((el) => !el.matches('.exd-map')).map((el) => el.cloneNode(true)));
+    map.href = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent($('.exd-map', detail).dataset.q)}`;
+    count.textContent = `${index + 1} / ${cards.length}`;
+    if (dir) {
+      body.style.setProperty('--dir', `${dir * 16}px`);
+      body.classList.toggle('swap', false); void body.offsetWidth; body.classList.add('swap');
+    }
+    sheet.scrollTop = 0;
+  }
+
+  function open(i, from) {
+    opener = from;
+    render(i);
+    document.documentElement.classList.add('modal-open');
+    modal.showModal();
+  }
+  function finish() {
+    modal.classList.toggle('closing', false);
+    if (modal.open) modal.close();
+  }
+  function close() {
+    if (!modal.open || modal.classList.contains('closing')) return;
+    if (reduceMotion) { finish(); return; }
+    modal.classList.add('closing');
+    setTimeout(finish, 280);
+  }
+  modal.addEventListener('close', () => {
+    document.documentElement.classList.toggle('modal-open', false);
+    if (opener) opener.focus({ preventScroll: true });
+  });
+
+  cards.forEach((c, i) => c.addEventListener('click', () => open(i, c)));
+  $('.exm-close', modal).addEventListener('click', close);
+  $('.exm-prev', modal).addEventListener('click', () => render(index - 1, -1));
+  $('.exm-next', modal).addEventListener('click', () => render(index + 1, 1));
+  $('.exm-book', modal).addEventListener('click', () => { opener = null; finish(); });
+  modal.addEventListener('cancel', (e) => { e.preventDefault(); close(); });       // Esc animates out
+  modal.addEventListener('click', (e) => { if (e.target === modal) close(); });  // backdrop click
+  modal.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') render(index + 1, 1);
+    if (e.key === 'ArrowLeft') render(index - 1, -1);
+  });
+
+  // Swipe down on the sheet to close (phones), only when scrolled to the top
+  let y0 = null;
+  sheet.addEventListener('touchstart', (e) => { y0 = sheet.scrollTop <= 0 ? e.touches[0].clientY : null; }, { passive: true });
+  sheet.addEventListener('touchmove', (e) => {
+    if (y0 === null) return;
+    const dy = e.touches[0].clientY - y0;
+    if (dy > 0) sheet.style.transform = `translateY(${dy}px)`;
+  }, { passive: true });
+  sheet.addEventListener('touchend', (e) => {
+    if (y0 === null) return;
+    const dy = e.changedTouches[0].clientY - y0;
+    sheet.style.transform = '';
+    if (dy > 90) close();
+    y0 = null;
+  });
+})();
